@@ -6,18 +6,22 @@ function getComputerChoice() {
     return comp;
 }
 
-function validateInput(choices) {
-    if (choice.includes(choices)) {
-        return true;
-    } else {
-        return false;
-    }
-}
+
 
 function getHumanChoice() {
-    const user = prompt("Choose between 'rock', 'paper' or 'Scissor':").toLowerCase();
-    console.log(`User: ${user}`);
-    return user;
+    let inputValidation = false;
+    while (inputValidation === false) {
+        const user = prompt("Choose between 'rock', 'paper' or 'Scissor':").toLowerCase();
+        if (user === null) {
+            continue;
+        }
+
+        if (choice.includes(user)) {
+            inputValidation = true;
+            console.log(`User: ${user}`);
+            return user;
+        }
+    }
 }
 
 
@@ -57,8 +61,3 @@ function playGame() {
     }
 }
 playGame();
-
-// const humanChoice = getHumanChoice();
-// const computerChoice = getComputerChoice();
-
-// console.log(playRound(humanChoice, computerChoice));
