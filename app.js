@@ -7,7 +7,6 @@ function getComputerChoice() {
 }
 
 
-
 function getHumanChoice() {
     let inputValidation = false;
     while (inputValidation === false) {
@@ -25,8 +24,8 @@ function getHumanChoice() {
 }
 
 
-// let humanScore = 0;
-// let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 
 function checkWinner(humanChoice, computerChoice) {
@@ -58,6 +57,20 @@ function playGame() {
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
         console.log(playRound(humanChoice, computerChoice));
+        console.log('--------------------------------------');
+        if (checkWinner(humanChoice, computerChoice) === 'Human') {
+            humanScore++;
+        } else if (checkWinner(humanChoice, computerChoice) === 'Computer') {
+            computerScore++;
+        }
+    }
+    console.log("Game Over.")
+    if (humanScore > computerScore) {
+        console.log("You win this round!");
+    } else if (humanScore < computerScore) {
+        console.log('Computer wins this round!');
+    } else {
+        console.log('It is a tie!');
     }
 }
 playGame();
