@@ -9,19 +9,22 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let inputValidation = false;
-    while (inputValidation === false) {
-        const user = prompt("Choose between 'rock', 'paper' or 'Scissor':").toLowerCase();
+    while (!inputValidation) {
+        let user = prompt("Choose between 'rock', 'paper' or 'Scissor':");
         if (user === null) {
             continue;
         }
 
-        if (choice.includes(user)) {
+        const toLower = user.toLowerCase();
+
+        if (choice.includes(toLower)) {
             inputValidation = true;
-            console.log(`User: ${user}`);
-            return user;
+            console.log(`User: ${toLower}`);
+            return toLower;
         }
     }
 }
+
 
 
 let humanScore = 0;
@@ -31,10 +34,12 @@ let computerScore = 0;
 function checkWinner(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         return 'It is a Tie!';
+
     } else if ((humanChoice === 'rock' && computerChoice === 'scissor') ||
         (humanChoice === 'paper' && computerChoice === 'rock') ||
         (humanChoice === 'scissor' && computerChoice === 'paper')) {
         return 'Human';
+
     } else {
         return 'Computer';
     }
@@ -48,8 +53,10 @@ function playGame() {
             const result = checkWinner(humanChoice, computerChoice);
             if (result === 'It is a Tie!') {
                 return 'It is a Tie!'
+
             } else if (result === 'Human') {
                 return `You win! ${humanChoice} beats ${computerChoice}`
+
             } else {
                 return `You lose! ${computerChoice} beats ${humanChoice}`
             }
