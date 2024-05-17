@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
     <title>Janken Pon!</title>
 </head>
 <body>
     <h1>Rock Paper Scissor</h1>
 
-    <p>A race to <b>5</b> rock paper scissor  game.</p>
-
-    <button id="newGame">New Game</button>
+    <p>A race to <b>5</b> rock paper scissor game.</p>
 
     <div class="container">
-    <button class="select" id="rock">✊</button>
-    <button class="select" id="paper">✋</button>
-    <button class="select" id="scissor">✌️</button>
-    </div>
+        <div class="playerSelection">
+            <h2>You: <span class="displayPlayerScore">0</span> </h2>
+            <button class="selection" id="rock">✊</button>
+            <button class="selection" id="paper">✋</button>
+            <button class="selection" id="scissor">✌️</button>
+        </div>
 
+        <div class="computerSelection">
+            <h2>Computer: <span class="displayComputerScore">0</span> </h2>
+            <button class="rock">✊</button>
+            <button class="paper">✋</button>
+            <button class="scissor">✌️</button>
+        </div>
+    </div>
 
     <div class="results">
-        <p>Game Result:</p>
-        <div>User: <span>0</span> </div>
-        <div>Computer: <span>0</span> </div>
+        <p class="displayPlayerChoice">YOU:</p> 
+        <p class="displayComputerChoice">COMPUTER:</p>
+        <h2 class="displayGameResult">RESULT</h2>
     </div>
+
+<div class="roundResult">
+    <h3 class="displayWinnerResult"></h3>
+</div>
 
     <script src="app.js"></script>
 </body>
