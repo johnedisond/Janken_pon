@@ -11,31 +11,38 @@
 
     <p>A race to <b>5</b> rock paper scissor game.</p>
 
-    <div class="container">
-        <div class="playerSelection">
-            <h2>You: <span class="displayPlayerScore">0</span> </h2>
-            <button class="selection" id="rock">✊</button>
-            <button class="selection" id="paper">✋</button>
-            <button class="selection" id="scissor">✌️</button>
+    <div class="reset">
+        <button id="newGame">New Game</button>
+    </div>
+
+    <div class="theGame">
+        <div class="container">
+            <div class="playerSelection">
+                <h2>You: <span class="displayPlayerScore">0</span> </h2>
+                <button class="selection" id="rock">✊</button>
+                <button class="selection" id="paper">✋</button>
+                <button class="selection" id="scissor">✌️</button>
+            </div>
+
+            <div class="computerSelection">
+                <h2>Computer: <span class="displayComputerScore">0</span> </h2>
+                <button class="rock">✊</button>
+                <button class="paper">✋</button>
+                <button class="scissor">✌️</button>
+            </div>
         </div>
 
-        <div class="computerSelection">
-            <h2>Computer: <span class="displayComputerScore">0</span> </h2>
-            <button class="rock">✊</button>
-            <button class="paper">✋</button>
-            <button class="scissor">✌️</button>
+        <div class="results">
+            <p class="displayPlayerChoice">YOU:</p> 
+            <p class="displayComputerChoice">COMPUTER:</p>
+            <h2 class="displayGameResult">RESULT</h2>
         </div>
     </div>
 
-    <div class="results">
-        <p class="displayPlayerChoice">YOU:</p> 
-        <p class="displayComputerChoice">COMPUTER:</p>
-        <h2 class="displayGameResult">RESULT</h2>
+    <div class="roundResult">
+        <h3 class="displayWinnerResult"></h3>
     </div>
-
-<div class="roundResult">
-    <h3 class="displayWinnerResult"></h3>
-</div>
+    
 
     <script src="app.js"></script>
 </body>

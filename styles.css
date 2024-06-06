@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(195, 192, 192);
+    background-color: hsl(0, 0%, 90%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +8,32 @@ body {
 
 body p {
     margin-bottom: 40px;
+}
+
+#newGame {
+    background-color: hsl(240, 85%, 61%);
+    color: white;
+    padding: 8px 24px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: hsl(0, 0%, 90%);
+}
+
+#newGame:hover {
+    color: white;
+    background-color: hsl(240, 70%, 61%);
+}
+
+.theGame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 95%);
 }
 
 .container {
@@ -78,7 +104,7 @@ body p {
     border-radius: 10px;
     margin-top: 40px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.51);
+    background-color: hsl(0, 0%, 90%);
 }
 
 

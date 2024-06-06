@@ -5,6 +5,7 @@ const displayGameResult = document.querySelector(".displayGameResult");
 const displayPlayerScore = document.querySelector(".displayPlayerScore");
 const displayComputerScore = document.querySelector(".displayComputerScore");
 const displayWinnerResult = document.querySelector(".displayWinnerResult");
+const newGame = document.querySelector("#newGame");
 
 
 const choices = ["rock", "paper", "scissor"];
@@ -23,6 +24,8 @@ const buttonDisabled = () => {
     paper.classList.remove("selection");
     scissor.classList.remove("selection");
 }
+
+
 
 for (let playerSelect of playerSelection) {
     playerSelect.addEventListener("click", () => {
@@ -103,3 +106,25 @@ function playRound(playerChoice) {
         buttonDisabled();
     }
 }
+
+
+newGame.addEventListener("click", function () {
+    isGameOver = false;
+    playerScore = 0;
+    computerScore = 0;
+    displayPlayerScore.textContent = 0;
+    displayComputerScore.textContent = 0;
+    displayGameResult.classList.remove("winColor", "loseColor");
+    displayPlayerScore.classList.remove("winColor", "loseColor");
+    displayComputerScore.classList.remove("winColor", "loseColor");
+    displayPlayerChoice.textContent = "YOU:";
+    displayComputerChoice.textContent = "COMPUTER:";
+    displayGameResult.textContent = "RESULT";
+    displayWinnerResult.textContent = "";
+    rock.disabled = false;
+    paper.disabled = false;
+    scissor.disabled = false;
+    rock.classList.add("selection");
+    paper.classList.add("selection");
+    scissor.classList.add("selection");
+})
