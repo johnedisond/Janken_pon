@@ -121,6 +121,7 @@ newGame.addEventListener("click", function () {
     displayComputerChoice.textContent = "COMPUTER:";
     displayGameResult.textContent = "RESULT";
     displayWinnerResult.textContent = "";
+    displayWinnerResult.classList.remove("winColor", "loseColor");
     rock.disabled = false;
     paper.disabled = false;
     scissor.disabled = false;
