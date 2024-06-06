@@ -15,6 +15,15 @@ let computerScore = 0;
 let winningScore = 5;
 let isGameOver = false;
 
+const buttonDisabled = () => {
+    rock.disabled = true;
+    paper.disabled = true;
+    scissor.disabled = true;
+    rock.classList.remove("selection");
+    paper.classList.remove("selection");
+    scissor.classList.remove("selection");
+}
+
 for (let playerSelect of playerSelection) {
     playerSelect.addEventListener("click", () => {
         const playerChoice = playerSelect.id;
@@ -83,18 +92,14 @@ function playRound(playerChoice) {
         displayPlayerScore.classList.add("winColor");
         displayComputerScore.classList.add("loseColor");
         displayWinnerResult.classList.add("winColor");
-        displayWinnerResult.textContent = "Game Over! YOU win this round!"
-        rock.disabled = true;
-        paper.disabled = true;
-        scissor.disabled = true;
+        displayWinnerResult.textContent = "Game Over! YOU win this round!";
+        buttonDisabled();
 
     } else if (computerScore === winningScore) {
         displayPlayerScore.classList.add("loseColor");
         displayComputerScore.classList.add("winColor");
         displayWinnerResult.classList.add("loseColor");
-        displayWinnerResult.textContent = "Game Over! COMPUTER wins this round!"
-        rock.disabled = true;
-        paper.disabled = true;
-        scissor.disabled = true;
+        displayWinnerResult.textContent = "Game Over! COMPUTER wins this round!";
+        buttonDisabled();
     }
 }

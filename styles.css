@@ -38,10 +38,9 @@ body p {
     background: none;
     border: none;
     outline: none;
-    cursor: pointer;
     margin: 15px;
     font-size: 2rem;
-    transition: 200ms;
+    transition: 500ms ease-out;
 }
 
 .computerSelection button {
@@ -52,7 +51,8 @@ body p {
     font-size: 2rem;
 }
 
-.playerSelection button:hover {
+.selection:hover {
+    cursor: pointer;
     transform: scale(1.8);
 }
 
