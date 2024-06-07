@@ -6,6 +6,7 @@ const displayPlayerScore = document.querySelector(".displayPlayerScore");
 const displayComputerScore = document.querySelector(".displayComputerScore");
 const displayWinnerResult = document.querySelector(".displayWinnerResult");
 const newGame = document.querySelector("#newGame");
+const winScore = document.querySelector("#winScore");
 
 
 const choices = ["rock", "paper", "scissor"];
@@ -13,7 +14,7 @@ const choices = ["rock", "paper", "scissor"];
 
 let playerScore = 0;
 let computerScore = 0;
-let winningScore = 5;
+let winningScore = 3;
 let isGameOver = false;
 
 const buttonDisabled = () => {
@@ -108,7 +109,14 @@ function playRound(playerChoice) {
 }
 
 
-newGame.addEventListener("click", function () {
+newGame.addEventListener("click", reset);
+
+winScore.addEventListener("change", function () {
+    winningScore = parseInt(this.value);
+    reset();
+})
+
+function reset() {
     isGameOver = false;
     playerScore = 0;
     computerScore = 0;
@@ -128,4 +136,4 @@ newGame.addEventListener("click", function () {
     rock.classList.add("selection");
     paper.classList.add("selection");
     scissor.classList.add("selection");
-})
+}

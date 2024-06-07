@@ -10,6 +10,13 @@ body p {
     margin-bottom: 40px;
 }
 
+select {
+    border-radius: 10px;
+    padding: 1px 2px;
+    border: 1px solid gray;
+    outline: none;
+}
+
 #newGame {
     background-color: hsl(240, 85%, 61%);
     color: white;
@@ -31,7 +38,7 @@ body p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid gray;
     border-radius: 10px;
     background-color: hsl(0, 0%, 95%);
 }
